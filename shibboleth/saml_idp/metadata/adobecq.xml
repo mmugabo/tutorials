@@ -1,0 +1,39 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="http://www.blogsaml.com">
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SPInfo">
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIEdzCCA1+gAwIBAgIJAPswGGW+b631MA0GCSqGSIb3DQEBBQUAMIGDMQswCQYD
+VQQGEwJVUzELMAkGA1UECBMCTUExDjAMBgNVBAcTBUFjdG9uMQ4wDAYDVQQKEwVB
+ZG9iZTESMBAGA1UECxMJTWFya2V0aW5nMQ8wDQYDVQQDEwZIYXNzYW4xIjAgBgkq
+hkiG9w0BCQEWE3NhbXBsZUBibG9nc2FtbC5jb20wHhcNMTQwNTIzMTkzODI1WhcN
+MTcwNTIyMTkzODI1WjCBgzELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAk1BMQ4wDAYD
+VQQHEwVBY3RvbjEOMAwGA1UEChMFQWRvYmUxEjAQBgNVBAsTCU1hcmtldGluZzEP
+MA0GA1UEAxMGSGFzc2FuMSIwIAYJKoZIhvcNAQkBFhNzYW1wbGVAYmxvZ3NhbWwu
+Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsW8NAHsIvl4EdEu0
+0eZHuSYOAFLDZa0EQzf5+QDE179uHkqFIYpgdSJO3qj3HNKqlU/vnZNhQBJ2tRrc
+BjI7pWQO/G9f+7pQKke9QVU88IDnmmGknlCTiaKLv4p68XHR4AeTI2tfulYpURa+
+V5onIxXoyXqubrSxTb0zWVZy9iZmpPA2gCkH3Yzi/TM+yxz5A7q/Vh4pYm3+xqQS
+gb1h5CFpA3YWlfSw2ONvNKlx9vJjfC+UCFxzNzbEF7f5u/c2zdKs72b70W8CnwTg
+ny+C0qEDLKNYStVag8AUau9SmyXoKSShvHfZOGNW0ad1n44dD9TLCTKTpG1DloWI
+yugtzwIDAQABo4HrMIHoMB0GA1UdDgQWBBT6Ve57XbEy+G+EzQTE+o8rzEiimzCB
+uAYDVR0jBIGwMIGtgBT6Ve57XbEy+G+EzQTE+o8rzEiim6GBiaSBhjCBgzELMAkG
+A1UEBhMCVVMxCzAJBgNVBAgTAk1BMQ4wDAYDVQQHEwVBY3RvbjEOMAwGA1UEChMF
+QWRvYmUxEjAQBgNVBAsTCU1hcmtldGluZzEPMA0GA1UEAxMGSGFzc2FuMSIwIAYJ
+KoZIhvcNAQkBFhNzYW1wbGVAYmxvZ3NhbWwuY29tggkA+zAYZb5vrfUwDAYDVR0T
+BAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEATJi8KCGnNM6lVX8x+GBhm3q0VdF+
+VIAvYXJ4TqP3DGSUFr2ETt187cQ3ZtJsU+U5mQ8NX6DRJ7QVZjKPe/6vRltVlsvR
+z+b8vjXlWVWo6Zjcd96MQibESEutzLlwfQBq3A3azzqUmtEpA2woXzhV5XXvAsqt
+HsPYgcM9mZNO+FS3pDkOEdfyQuG4nUa0s2jx/gIYtqcMJqTK5d3c1nAaUhLEVuYr
+Upm6t+eL0/Yw4hrTjP3kEQO6g5ABsv9ew7iPs7G1RMm5BJErHyAHvgAeP/NZD/H6
+C4fnnHXKhR7wbpxu9VipDIXQBmblPSvWGak+KhsPiQucvOvf2ksVtxoyLQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://www.blogsaml.com:4502/content/geometrixx/saml_login" index="1"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.blogsaml.com:8443/idp/Authn/UserPassword"/>
+
+  </md:SPSSODescriptor>
+</md:EntityDescriptor>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://www.blogsaml.com/idp/shibboleth">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">blogsaml.com</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+
+MIIDLDCCAhSgAwIBAgIVAJFqv2IwWSBYil9pKBV1hTSBFsI/MA0GCSqGSIb3DQEB
+
+BQUAMBsxGTAXBgNVBAMTEHd3dy5ibG9nc2FtbC5jb20wHhcNMTMwNTIxMTI0NjQ2
+
+WhcNMzMwNTIxMTI0NjQ2WjAbMRkwFwYDVQQDExB3d3cuYmxvZ3NhbWwuY29tMIIB
+
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApo5t6E8cKcjwEtzBCUmmR9sC
+
+qjI7Xq1ZOGxet5LkN9qUAVIf76WoB5v8q/t6QUSqfriW+ufWsCIMu/TEFF20j1sz
+
+WGod5i1L1lHkV11yLIjFpI7oADFjJ5IBzjjaFUeA2+oaNKHpVjm/cQelyEi8E0As
+
+eBdJHBy7+1izvcxwBA+I6lic0gNhIEIibPLf6vc+HGtp+PL9YRYuRqwthZnuF5p+
+
+tgjuLbAciCx+1R9K8oREdSH/32UcJv9ZmdoAm9BnGAVP3iRfwLSZdT8nFG95hOWe
+
+VAusC28JF2VVcwF1cFOWsiJAi1QarkNJK3NZVwt57QHrQNhHZS4IcnfyF9azUQID
+
+AQABo2cwZTBEBgNVHREEPTA7ghB3d3cuYmxvZ3NhbWwuY29thidodHRwczovL3d3
+
+dy5ibG9nc2FtbC5jb20vaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOqnqn+pmHw7
+
+yKYxKAT+hgD5pS6LMA0GCSqGSIb3DQEBBQUAA4IBAQAPzqE5BQYrpCy3qfOiCycJ
+
+cngaw7SuZJ9dDePPsSZ0U1jXdVOJCctU8VxKxZHiynAqO5mqxlMYrD7DeCszZoLC
+
+Rli5rYzcRIIEIInh6rmRi8J7GZD7YxOHL4QwzwEBl70NNYuALkHNUnF0q8tWLWrv
+
+vegfxA1t9oxC+6gX3OVX3pkvIx32TNpeqJA0HEorYJguH4TUaLXehSMNtKiIX+Yi
+
+h2E7yP76+o6nieRES6bRYxRw8PT63GMHMdTiohT1Bktxe3B1joL3Kni4GlThqVNG
+
+6aCS3mTeeOzN+RkDFdj6ELO0Eqw6jCJrk+ggmwY7V3cGJ+GwqfTUuCok523TvCJ2
+
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://www.blogsaml.com:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/Redirect/SLO" />
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/POST/SLO" />
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/SOAP/SLO" />
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://www.blogsaml.com:8443/idp/profile/Shibboleth/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/POST/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">blogsaml.com</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+
+MIIDLDCCAhSgAwIBAgIVAJFqv2IwWSBYil9pKBV1hTSBFsI/MA0GCSqGSIb3DQEB
+
+BQUAMBsxGTAXBgNVBAMTEHd3dy5ibG9nc2FtbC5jb20wHhcNMTMwNTIxMTI0NjQ2
+
+WhcNMzMwNTIxMTI0NjQ2WjAbMRkwFwYDVQQDExB3d3cuYmxvZ3NhbWwuY29tMIIB
+
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApo5t6E8cKcjwEtzBCUmmR9sC
+
+qjI7Xq1ZOGxet5LkN9qUAVIf76WoB5v8q/t6QUSqfriW+ufWsCIMu/TEFF20j1sz
+
+WGod5i1L1lHkV11yLIjFpI7oADFjJ5IBzjjaFUeA2+oaNKHpVjm/cQelyEi8E0As
+
+eBdJHBy7+1izvcxwBA+I6lic0gNhIEIibPLf6vc+HGtp+PL9YRYuRqwthZnuF5p+
+
+tgjuLbAciCx+1R9K8oREdSH/32UcJv9ZmdoAm9BnGAVP3iRfwLSZdT8nFG95hOWe
+
+VAusC28JF2VVcwF1cFOWsiJAi1QarkNJK3NZVwt57QHrQNhHZS4IcnfyF9azUQID
+
+AQABo2cwZTBEBgNVHREEPTA7ghB3d3cuYmxvZ3NhbWwuY29thidodHRwczovL3d3
+
+dy5ibG9nc2FtbC5jb20vaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOqnqn+pmHw7
+
+yKYxKAT+hgD5pS6LMA0GCSqGSIb3DQEBBQUAA4IBAQAPzqE5BQYrpCy3qfOiCycJ
+
+cngaw7SuZJ9dDePPsSZ0U1jXdVOJCctU8VxKxZHiynAqO5mqxlMYrD7DeCszZoLC
+
+Rli5rYzcRIIEIInh6rmRi8J7GZD7YxOHL4QwzwEBl70NNYuALkHNUnF0q8tWLWrv
+
+vegfxA1t9oxC+6gX3OVX3pkvIx32TNpeqJA0HEorYJguH4TUaLXehSMNtKiIX+Yi
+
+h2E7yP76+o6nieRES6bRYxRw8PT63GMHMdTiohT1Bktxe3B1joL3Kni4GlThqVNG
+
+6aCS3mTeeOzN+RkDFdj6ELO0Eqw6jCJrk+ggmwY7V3cGJ+GwqfTUuCok523TvCJ2
+
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://www.blogsaml.com:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.blogsaml.com:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>
